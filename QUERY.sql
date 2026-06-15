@@ -98,3 +98,8 @@ SELECT Bookings.booking_id,users.full_name,matches.fixture,Bookings.total_cost F
 --QUERY 5  
 
 SELECT users.user_id,users.full_name,Bookings.booking_id FROM users LEFT JOIN Bookings ON users.user_id=Bookings.booking_id;
+
+
+--QUERY 6 
+
+SELECT booking_id,match_id,total_cost FROM Bookings WHERE total_cost >(SELECT AVG(total_cost) FROM Bookings);
