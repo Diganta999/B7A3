@@ -47,3 +47,11 @@ VALUES('Diganta Sikder','digantasikder123@gmail.com','FootBall Fan','01308340811
 ('Jharna Rani Sikder','jharnasikder088@gmail.com','Ticket Manager','01811387952'),
 ('Shipan Sikder ','shipansikder123@gmail.com','FootBall Fan','01610673585'),
 ('Shuchitra Sikder','shuchitrasikder123@gmail.com','FootBall Fan',NULL);
+
+--2. INSERT MATCHES DATA 
+INSERT INTO matches(fixture,tournament_category,base_ticket_price,match_status)
+VALUES ('Bangladesh vs India','SAFF Championship','500.00','Available'),
+('Brazil vs Argentina','International Friendly',1500.00,'Selling fast'),
+('Real Madrid vs Barcelona','La Liga',3000.00,'Sold Out'),
+('Manchester City vs Liverpool','Premier League',2500.00,'Available'),
+('Bayern Munich vs Dortmund','Bundesliga',2000.00,'Postponed');
