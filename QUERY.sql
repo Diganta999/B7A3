@@ -22,3 +22,17 @@ CREATE TABLE matches(
     CHECK(base_ticket_price>=0),
     CHECK(match_status IN ('Available','Selling fast','Sold Out','Postponed'))
 );
+
+--3. CREATE BOOKINGS TABLE 
+
+CREATE TABLE Bookings(
+    booking_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(user_id),
+    match_id INT REFERENCES matches(match_id),
+    seat_number VARCHAR(20),
+    payment_status VARCHAR(20),
+    total_cost DECIMAL(10,2) NOT NULL CHECK(total_cost>=0),
+    
+    CHECK(payment_status IN ('Pending','Confirmed','Cancelled','Refunded') OR payment_status IS NULL)
+
+);
