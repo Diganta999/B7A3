@@ -36,3 +36,14 @@ CREATE TABLE Bookings(
     CHECK(payment_status IN ('Pending','Confirmed','Cancelled','Refunded') OR payment_status IS NULL)
 
 );
+
+-- INSERT SOME DATA TO MY DATABASE  
+
+--1. INSERT USER DATA 
+
+INSERT INTO users(full_name,email,role,phone_number) 
+VALUES('Diganta Sikder','digantasikder123@gmail.com','FootBall Fan','01308340811'),
+('Shasank Sikder','shasanksikder088@gmail.com','FootBall Fan','01742814803'),
+('Jharna Rani Sikder','jharnasikder088@gmail.com','Ticket Manager','01811387952'),
+('Shipan Sikder ','shipansikder123@gmail.com','FootBall Fan','01610673585'),
+('Shuchitra Sikder','shuchitrasikder123@gmail.com','FootBall Fan',NULL);
