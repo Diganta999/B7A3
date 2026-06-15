@@ -89,3 +89,6 @@ SELECT user_id,full_name,email FROM users WHERE full_name ILIKE 'Tanvir%' OR ful
 SELECT booking_id,user_id,match_id,COALESCE(payment_status,'Action Required') AS systematic_status FROM Bookings WHERE payment_status IS NULL;
 
 
+--QUERY 4 
+
+SELECT Bookings.booking_id,users.full_name,matches.fixture,Bookings.total_cost FROM Bookings INNER JOIN users ON Bookings.user_id=users.user_id INNER JOIN matches ON Bookings.match_id=matches.match_id;
