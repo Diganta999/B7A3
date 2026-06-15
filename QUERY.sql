@@ -92,3 +92,9 @@ SELECT booking_id,user_id,match_id,COALESCE(payment_status,'Action Required') AS
 --QUERY 4 
 
 SELECT Bookings.booking_id,users.full_name,matches.fixture,Bookings.total_cost FROM Bookings INNER JOIN users ON Bookings.user_id=users.user_id INNER JOIN matches ON Bookings.match_id=matches.match_id;
+
+
+
+--QUERY 5  
+
+SELECT users.user_id,users.full_name,Bookings.booking_id FROM users LEFT JOIN Bookings ON users.user_id=Bookings.booking_id;
